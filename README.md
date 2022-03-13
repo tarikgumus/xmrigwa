@@ -1,5 +1,6 @@
 # xmrig
 
 warm for winter
+if only power was cheaper
 
-v6.13.1
+v6.16.4
