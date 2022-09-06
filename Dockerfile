@@ -21,7 +21,9 @@ RUN pip3 install --upgrade pip
 RUN pip3 install altair vega_datasets
 RUN pip3 install streamlit
 
+
 COPY streamlit_app.py /usr/local/bin/
 RUN chmod +x /usr/local/bin/streamlit_app.py
+EXPOSE 8051
 WORKDIR   /usr/local/bin/
 ENTRYPOINT ["streamlit", "run", "streamlit_app.py"]
