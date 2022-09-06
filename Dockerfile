@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM lsiobase/ubuntu:bionic
 
 # set version label
 ARG BUILD_DATE
