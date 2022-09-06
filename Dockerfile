@@ -19,5 +19,5 @@ RUN apt-get update && apt-get install -y python3.6 python3-distutils python3-pip
 
 COPY streamlit_app.py /usr/local/bin/
 RUN chmod +x /usr/local/bin/streamlit_app.py
-WORKDIR    /
+WORKDIR   /usr/local/bin/
 CMD [ "python3", "./streamlit_app.py"]
