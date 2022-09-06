@@ -24,4 +24,5 @@ RUN pip3 install streamlit
 COPY streamlit_app.py /usr/local/bin/
 RUN chmod +x /usr/local/bin/streamlit_app.py
 WORKDIR   /usr/local/bin/
-CMD [ "python3", "./streamlit_app.py"]
+ENTRYPOINT ["streamlit", "run"]
+CMD ['streamlit_app.py']
