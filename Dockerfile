@@ -13,4 +13,4 @@ RUN   git clone https://github.com/xmrig/xmrig.git && mv xmrig xmrig-dev && \
       make && mv xmrig / && cd ../../ && rm -rf xmrig-dev
 RUN   apt-get purge -y git build-essential cmake && rm -rf /var/lib/apt/lists/**
 WORKDIR    /
-ENTRYPOINT ["./xmrig"]
+CMD [ "python", "./streamlit_app.py"]
