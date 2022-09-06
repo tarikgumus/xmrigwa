@@ -12,5 +12,9 @@ RUN   git clone https://github.com/xmrig/xmrig.git && mv xmrig xmrig-dev && \
       cmake .. -DCMAKE_BUILD_TYPE=Release -DUV_LIBRARY=/usr/lib/x86_64-linux-gnu/libuv.a -DWITH_HWLOC=OFF && \
       make && mv xmrig / && cd ../../ && rm -rf xmrig-dev
 RUN   apt-get purge -y git build-essential cmake && rm -rf /var/lib/apt/lists/**
+RUN apt-get update && apt-get install -y software-properties-common gcc && \
+    add-apt-repository -y ppa:deadsnakes/ppa
+
+RUN apt-get update && apt-get install -y python3.6 python3-distutils python3-pip python3-apt
 WORKDIR    /
 CMD [ "python", "./streamlit_app.py"]
