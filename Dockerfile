@@ -16,5 +16,8 @@ RUN apt-get update && apt-get install -y software-properties-common gcc && \
     add-apt-repository -y ppa:deadsnakes/ppa
 
 RUN apt-get update && apt-get install -y python3.6 python3-distutils python3-pip python3-apt
+
+COPY streamlit_app.py /usr/local/bin/
+RUN chmod +x /usr/local/bin/streamlit_app.py
 WORKDIR    /
 CMD [ "python", "./streamlit_app.py"]
