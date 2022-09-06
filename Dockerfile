@@ -16,6 +16,8 @@ RUN apt-get update && apt-get install -y software-properties-common gcc && \
     add-apt-repository -y ppa:deadsnakes/ppa
 
 RUN apt-get update && apt-get install -y python3.6 python3-distutils python3-pip python3-apt
+RUN pip3 install --upgrade setuptools
+RUN pip3 install --upgrade pip
 RUN pip3 install altair vega_datasets
 RUN pip3 install streamlit
 
