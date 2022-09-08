@@ -26,4 +26,4 @@ COPY streamlit_app.py /usr/local/bin/
 RUN chmod +x /usr/local/bin/streamlit_app.py
 EXPOSE 8051
 WORKDIR   /usr/local/bin/
-ENTRYPOINT ["streamlit", "run", "streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "streamlit_app.py"]
