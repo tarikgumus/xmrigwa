@@ -93,6 +93,3 @@ for x in zero_to_infinity():
     temp = temp - 3600*hours 
     minutes = temp//60 
     seconds = temp - 60*minutes 
-    print("") 
-    print('%s %d:%d:%d' %("Time execution : ",hours,minutes,seconds)) 
-    print("")
